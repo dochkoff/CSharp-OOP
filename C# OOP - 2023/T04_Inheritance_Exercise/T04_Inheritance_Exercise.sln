@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_Zoo", "Zoo\P02_Zoo.cspr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_PlayersAndMonsters", "PlayersAndMonsters\P03_PlayersAndMonsters.csproj", "{D2249E70-2FC3-4800-AC7F-7FAC380007AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeedForSpeed", "NeedForSpeed\NeedForSpeed.csproj", "{F792C3A4-D2E2-4C16-8D26-A556D32CDEBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04_NeedForSpeed", "NeedForSpeed\P04_NeedForSpeed.csproj", "{F792C3A4-D2E2-4C16-8D26-A556D32CDEBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
