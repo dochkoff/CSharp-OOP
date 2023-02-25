@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_Person", "Person\P01_Pe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "Animals\Animals.csproj", "{23920482-0658-4B8F-AADF-F7AC11015041}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant", "Restaurant\Restaurant.csproj", "{F5BBDD67-3182-49F7-9333-A67939D000BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_Restaurant", "Restaurant\P05_Restaurant.csproj", "{F5BBDD67-3182-49F7-9333-A67939D000BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_Zoo", "Zoo\P02_Zoo.csproj", "{9930D442-7F88-406E-AAE0-9461DB0B329E}"
 EndProject
