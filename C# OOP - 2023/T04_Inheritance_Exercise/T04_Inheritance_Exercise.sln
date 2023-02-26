@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_Person", "Person\P01_Person.csproj", "{B017C35F-8072-418C-9ECE-29BC667A118C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "Animals\Animals.csproj", "{23920482-0658-4B8F-AADF-F7AC11015041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06_Animals", "Animals\P06_Animals.csproj", "{23920482-0658-4B8F-AADF-F7AC11015041}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_Restaurant", "Restaurant\P05_Restaurant.csproj", "{F5BBDD67-3182-49F7-9333-A67939D000BE}"
 EndProject
