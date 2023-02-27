@@ -5,7 +5,9 @@ VisualStudioVersion = 25.0.1704.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_SortPeopleByNameAndAge", "P01_SortPeopleByNameAndAge\P01_SortPeopleByNameAndAge.csproj", "{D7CA8E03-36A1-43B7-AD40-BEB5A11E7253}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_Salary", "P02_Salary\P02_Salary.csproj", "{67E1949B-8D24-4EC9-A760-03D2990B795E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_SalaryIncrease", "P02_Salary\P02_SalaryIncrease.csproj", "{67E1949B-8D24-4EC9-A760-03D2990B795E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_ValidationOfData", "P03_ValidationOfData\P03_ValidationOfData.csproj", "{2311AC3C-51B8-4EA0-BCB2-9A033B20124B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{67E1949B-8D24-4EC9-A760-03D2990B795E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E1949B-8D24-4EC9-A760-03D2990B795E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E1949B-8D24-4EC9-A760-03D2990B795E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2311AC3C-51B8-4EA0-BCB2-9A033B20124B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2311AC3C-51B8-4EA0-BCB2-9A033B20124B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2311AC3C-51B8-4EA0-BCB2-9A033B20124B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2311AC3C-51B8-4EA0-BCB2-9A033B20124B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
