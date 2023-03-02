@@ -56,7 +56,7 @@
 
         public override string ToString()
         {
-            return $"{FirstName} {LastName} recaives {Salary:F2} leva.";
+            return $"{FirstName} {LastName} receives {Salary:F2} leva.";
         }
     }
 }
