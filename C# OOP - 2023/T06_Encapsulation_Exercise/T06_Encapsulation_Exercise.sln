@@ -5,7 +5,7 @@ VisualStudioVersion = 25.0.1705.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_ClassBoxData", "P01_ClassBoxData\P01_ClassBoxData.csproj", "{CCD62B68-6589-49A2-9FFD-745FCB39A209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalFarm", "P02_AnimalFarm\AnimalFarm.csproj", "{9EBC77D3-A6AC-4293-9F88-DE3CEDCFEB4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_AnimalFarm", "P02_AnimalFarm\P02_AnimalFarm.csproj", "{9EBC77D3-A6AC-4293-9F88-DE3CEDCFEB4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
