@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>P01_Vehicles</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AssemblyName>P02_VehiclesExtension</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AssemblyName>P01_Vehicles</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Models\Interfaces\" />
+    <None Remove="Core\" />
+    <None Remove="Core\Interfaces\" />
+    <None Remove="IO\" />
+    <None Remove="IO\Interfaces\" />
+    <None Remove="Factory\" />
+    <None Remove="Factory\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Interfaces\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Interfaces\" />
+    <Folder Include="IO\" />
+    <Folder Include="IO\Interfaces\" />
+    <Folder Include="Factory\" />
+    <Folder Include="Factory\Interfaces\" />
+  </ItemGroup>
+</Project>
