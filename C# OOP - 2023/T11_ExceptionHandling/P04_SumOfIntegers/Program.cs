@@ -1,15 +1,14 @@
 ﻿int sum = 0;
 
 string[] input = Console.ReadLine()
-    .Split(" ", StringSplitOptions.RemoveEmptyEntries);
+    .Split(" ");
 
 foreach (var element in input)
 {
     try
     {
-        int nun = int.Parse(element);
-        sum += nun;
-
+        int num = int.Parse(element);
+        sum += num;
     }
     catch (OverflowException)
     {
@@ -19,6 +18,7 @@ foreach (var element in input)
     {
         Console.WriteLine($"The element '{element}' is in wrong format!");
     }
+
     Console.WriteLine($"Element '{element}' processed - current sum: {sum}");
 }
 
