@@ -27,6 +27,9 @@ namespace LogForU.Core.Appenders
 
             MessageAppended++;
         }
+
+        public override string ToString()
+        => $"Appender type: {this.GetType().Name}, Layout type: {Layout.GetType().Name}, Report level: {ReportLevel.ToString().ToUpper()}, Messages appended: {MessageAppended}";
     }
 }
 
