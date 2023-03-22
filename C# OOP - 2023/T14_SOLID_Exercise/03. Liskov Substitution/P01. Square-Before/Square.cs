@@ -1,25 +1,11 @@
-﻿namespace P01._Square_Before
-{
-    public class Square : Rectangle
-    {
-        public override double Width
-        {
-            get { return base.Width; }
-            set
-            {
-                base.Width = value;
-                base.Height = value;
-            }
-        }
+﻿using System;
 
-        public override double Height
-        {
-            get { return base.Height; }
-            set
-            {
-                base.Height = value;
-                base.Width = value;
-            }
-        }
+namespace P01._Square_Before
+{
+    public class Square : Shape
+    {
+        public override double Area => Math.Pow(this.Width, 2);
+
+        public virtual double Width { get; set; }
     }
 }
