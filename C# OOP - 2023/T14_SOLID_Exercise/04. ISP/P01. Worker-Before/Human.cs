@@ -2,7 +2,7 @@
 {
     using Contracts;
 
-    public class Human : IWorker
+    public class Human : IWorker, IEater, ISleaper
     {
         public void Eat()
         {
