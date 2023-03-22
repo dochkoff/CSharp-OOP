@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P03. ShoppingCart", "P03. S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P02. DrawingShape", "P02. DrawingShape", "{79AA2A70-87E3-486F-8D7E-D4AC1E9C2865}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. FileStream-Before", "02. OCP\P01. FileStream-Before\P01. FileStream-Before.csproj", "{4FB36EA3-65D2-439C-B848-859B8AD07846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. FileStream-After", "02. OCP\P01. FileStream-Before\P01. FileStream-After.csproj", "{4FB36EA3-65D2-439C-B848-859B8AD07846}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02. DrawingShape-Before", "02. OCP\P02. DrawingShape-Before\P02. DrawingShape-Before.csproj", "{A02CC46F-C17F-4F2C-9B26-42DDE623C081}"
 EndProject

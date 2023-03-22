@@ -1,10 +1,12 @@
-﻿namespace P01._FileStream_Before
-{
-    public class Progress
-    {
-        private readonly File file;
+﻿using P01._FileStream_Before.Interfaces;
 
-        public Progress(File file)
+namespace P01._FileStream_Before
+{
+    public class Progress : IProgress
+    {
+        private readonly IFile file;
+
+        public Progress(IFile file)
         {
             this.file = file;
         }
