@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Liskov Substitution", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P01. Square", "P01. Square", "{BB1541A7-6679-42B3-ADFF-6768E0727081}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. Square-Before", "03. Liskov Substitution\P01. Square-Before\P01. Square-Before.csproj", "{596FF73B-CE4E-43DB-B15E-AFD7D81206A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. Square-After", "03. Liskov Substitution\P01. Square-Before\P01. Square-After.csproj", "{596FF73B-CE4E-43DB-B15E-AFD7D81206A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. ISP", "04. ISP", "{AE6C9FA5-C727-4B7B-9DC5-3A67800A3816}"
 EndProject
@@ -39,9 +39,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P01. Worker", "P01. Worker"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P02. Identity", "P02. Identity", "{0500E937-E18D-45EC-A447-6E3D08E6F994}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. Worker-Before", "04. ISP\P01. Worker-Before\P01. Worker-Before.csproj", "{79FE2E1B-DCB1-48BE-BB4F-1BFE97DAB8C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. Worker-After", "04. ISP\P01. Worker-Before\P01. Worker-After.csproj", "{79FE2E1B-DCB1-48BE-BB4F-1BFE97DAB8C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02. Identity-Before", "04. ISP\P02. Identity-Before\P02. Identity-Before.csproj", "{EA0AEF62-6A80-4043-A913-C40480BD1F86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02. Identity-After", "04. ISP\P02. Identity-Before\P02. Identity-After.csproj", "{EA0AEF62-6A80-4043-A913-C40480BD1F86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. DIP", "05. DIP", "{3780053E-9F38-4CAD-B7CD-7C399B12E189}"
 EndProject
@@ -51,7 +51,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P02. Worker", "P02. Worker"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P03. Database", "P03. Database", "{C209A499-6716-4212-92FA-4D5B22C4A5F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. HelloWorld-Before", "05. DIP\P01. HelloWorld-Before\P01. HelloWorld-Before.csproj", "{BF530910-A6C2-488E-BDEC-57E1151EE3B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. HelloWorld-After", "05. DIP\P01. HelloWorld-Before\P01. HelloWorld-After.csproj", "{BF530910-A6C2-488E-BDEC-57E1151EE3B6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02. Worker-Before", "05. DIP\P02. Worker-Before\P02. Worker-Before.csproj", "{7B9226D6-ABD5-48D4-8521-5CB03EBF7F54}"
 EndProject
