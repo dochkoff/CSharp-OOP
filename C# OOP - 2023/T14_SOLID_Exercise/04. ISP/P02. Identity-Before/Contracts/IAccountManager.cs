@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IAccount
+    public interface IAccountManager
     {
         bool RequireUniqueEmail { get; }
 
@@ -15,11 +15,5 @@
         void Login(string username, string password);
 
         void ChangePassword(string oldPass, string newPass);
-
-        IEnumerable<IUser> GetAllUsersOnline();
-
-        IEnumerable<IUser> GetAllUsers();
-
-        IUser GetUserByName(string name);
     }
 }
