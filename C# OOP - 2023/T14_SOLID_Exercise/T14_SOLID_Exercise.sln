@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.SRP", "01.SRP", "{E6F4FF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P01. DrawingShape", "P01. DrawingShape", "{F2A00292-1345-4653-A7E8-32A5297EFC74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. DrawingShape-Before", "01. SRP\P01. DrawingShape-Before\P01. DrawingShape-Before.csproj", "{5EC24C9C-942B-4B51-BCC6-20D0470A38D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. DrawingShape-After", "01. SRP\P01. DrawingShape-Before\P01. DrawingShape-After.csproj", "{5EC24C9C-942B-4B51-BCC6-20D0470A38D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P02. Books", "P02. Books", "{854058DB-B0C5-4292-8037-29B1DB38EDC0}"
 EndProject
