@@ -4,14 +4,14 @@ namespace P01._HelloWorld
 {
     public class HelloWorld
     {
-        public string Greeting(string name)
+        public string Greeting(string name, DateTime dayToday)
         {
-            if (DateTime.Now.Hour < 12)
+            if (dayToday.Hour < 12)
             {
                 return "Good morning, " + name;
             }
 
-            if (DateTime.Now.Hour < 18)
+            if (dayToday.Hour < 18)
             {
                 return "Good afternoon, " + name;
             }

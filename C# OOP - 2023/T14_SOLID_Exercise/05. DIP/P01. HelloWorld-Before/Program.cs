@@ -1,4 +1,5 @@
 ﻿using System;
+using P01._HelloWorld;
 
 namespace P01._HelloWorld_Before
 {
@@ -6,7 +7,8 @@ namespace P01._HelloWorld_Before
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            HelloWorld helloWorld = new();
+            Console.WriteLine(helloWorld.Greeting("Dochkoff", DateTime.Now));
         }
     }
 }
