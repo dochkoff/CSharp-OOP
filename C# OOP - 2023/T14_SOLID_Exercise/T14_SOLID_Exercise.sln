@@ -53,7 +53,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P03. Database", "P03. Datab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01. HelloWorld-After", "05. DIP\P01. HelloWorld-Before\P01. HelloWorld-After.csproj", "{BF530910-A6C2-488E-BDEC-57E1151EE3B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02. Worker-Before", "05. DIP\P02. Worker-Before\P02. Worker-Before.csproj", "{7B9226D6-ABD5-48D4-8521-5CB03EBF7F54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02. Worker-After", "05. DIP\P02. Worker-Before\P02. Worker-After.csproj", "{7B9226D6-ABD5-48D4-8521-5CB03EBF7F54}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03. Database-Before", "05. DIP\P03. Database-Before\P03. Database-Before.csproj", "{B402B26A-737E-413B-B500-908B2651AEFD}"
 EndProject

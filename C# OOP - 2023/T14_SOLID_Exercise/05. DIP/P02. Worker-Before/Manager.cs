@@ -1,10 +1,10 @@
 ﻿namespace P02._Worker_Before
 {
-    public class Manager
+    public class Manager : IEmployee
     {
-        public Manager()
+        public void Work()
         {
-            var worker = new Worker();
+            IEmployee worker = new Worker();
             worker.Work();
         }
     }

@@ -6,4 +6,7 @@
     <RootNamespace>P02._Worker_Before</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AssemblyName>P02. Worker-After</AssemblyName>
+  </PropertyGroup>
 </Project>
