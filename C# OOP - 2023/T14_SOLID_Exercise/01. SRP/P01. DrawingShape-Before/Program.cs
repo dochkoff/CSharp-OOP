@@ -1,4 +1,5 @@
 ﻿using System;
+using P01._DrawingShape_Before.Contracts;
 
 namespace P01._DrawingShape_Before
 {
@@ -6,7 +7,12 @@ namespace P01._DrawingShape_Before
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IShape rectangle = new Rectangle(10, 20);
+            IRenderer renderer = new Renderer();
+            IDrawingContext drawingContext = new DrawingContext();
+            IDrawingManager drawingManager = new DrawingManager(drawingContext, renderer);
+
+            drawingManager.Draw(rectangle);
         }
     }
 }

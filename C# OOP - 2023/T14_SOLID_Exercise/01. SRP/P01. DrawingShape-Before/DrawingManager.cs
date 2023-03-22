@@ -15,7 +15,7 @@
 
         public void Draw(IShape shape)
         {
-            shape.Draw(this.renderer, this.drawingContext);
+            this.renderer.Render(this.drawingContext, shape);
         }
     }
 }

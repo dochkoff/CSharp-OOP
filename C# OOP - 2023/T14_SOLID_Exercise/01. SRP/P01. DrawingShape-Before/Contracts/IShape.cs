@@ -2,6 +2,6 @@
 {
     public interface IShape
     {
-        void Draw(IRenderer renderer, IDrawingContext drawingContext);
+        public double Area { get; }
     }
 }
