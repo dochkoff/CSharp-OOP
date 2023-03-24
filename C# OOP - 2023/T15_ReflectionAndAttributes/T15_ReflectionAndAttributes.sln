@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_Stealer", "P01_Stealer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_High-QualityMistakes", "P02_High-QualityMistakes\P02_High-QualityMistakes.csproj", "{F887EA41-EC9F-43EC-9CF0-123244D13B75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_MissionPrivateImpossible", "P03_MissionPrivateImpossible\P03_MissionPrivateImpossible.csproj", "{80C48CB2-A61C-4E75-8187-FEE52B8E9383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C48CB2-A61C-4E75-8187-FEE52B8E9383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C48CB2-A61C-4E75-8187-FEE52B8E9383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C48CB2-A61C-4E75-8187-FEE52B8E9383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C48CB2-A61C-4E75-8187-FEE52B8E9383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
