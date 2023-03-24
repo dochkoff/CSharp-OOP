@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1705.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_Stealer", "P01_Stealer\P01_Stealer.csproj", "{93F90688-3527-42A2-A860-8071F0962BEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_High-QualityMistakes", "P02_High-QualityMistakes\P02_High-QualityMistakes.csproj", "{F887EA41-EC9F-43EC-9CF0-123244D13B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93F90688-3527-42A2-A860-8071F0962BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F90688-3527-42A2-A860-8071F0962BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F90688-3527-42A2-A860-8071F0962BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F887EA41-EC9F-43EC-9CF0-123244D13B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
