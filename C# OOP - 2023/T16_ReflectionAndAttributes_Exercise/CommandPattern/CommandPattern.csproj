@@ -5,4 +5,10 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Core\Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Commands\" />
+  </ItemGroup>
 </Project>
