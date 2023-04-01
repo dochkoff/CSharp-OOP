@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1705.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_Singleton", "P01_Singleton\P01_Singleton.csproj", "{18F7B641-71C2-414E-A520-0B37787DEAA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_Facade", "P02_Facade\P02_Facade.csproj", "{A134B04A-717E-42D5-85BF-D4673FE1169A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{18F7B641-71C2-414E-A520-0B37787DEAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18F7B641-71C2-414E-A520-0B37787DEAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18F7B641-71C2-414E-A520-0B37787DEAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A134B04A-717E-42D5-85BF-D4673FE1169A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A134B04A-717E-42D5-85BF-D4673FE1169A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A134B04A-717E-42D5-85BF-D4673FE1169A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A134B04A-717E-42D5-85BF-D4673FE1169A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
