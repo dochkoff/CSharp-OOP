@@ -6,27 +6,22 @@ namespace P02_Composite.Models
     public class CompositeGift : GiftBase, IGiftOperations
     {
         private List<GiftBase> _gifts;
-        public CompositeGift(string name, int price)
+
+        public CompositeGift(string name, decimal price)
             : base(name, price)
         {
             _gifts = new List<GiftBase>();
         }
 
-        public void Add(GiftBase gift)
-        {
-            _gifts.Add(gift);
-        }
+        public void Add(GiftBase gift) => _gifts.Add(gift);
 
-        public void Remove(GiftBase gift)
-        {
-            _gifts.Remove(gift);
-        }
+        public void Remove(GiftBase gift) => _gifts.Remove(gift);
 
-        public override int CalculateTotalPrice()
+        public override decimal CalculateTotalPrice()
         {
-            int total = 0;
+            decimal total = 0m;
 
-            Console.WriteLine($"{name} contains the following products with prices:");
+            Console.WriteLine($"{Name} contains the following products with prices:");
 
             foreach (var gift in _gifts)
             {
@@ -37,4 +32,3 @@ namespace P02_Composite.Models
         }
     }
 }
-

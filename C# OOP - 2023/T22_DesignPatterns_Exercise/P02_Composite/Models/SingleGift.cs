@@ -3,17 +3,16 @@ namespace P02_Composite.Models
 {
     public class SingleGift : GiftBase
     {
-        public SingleGift(string name, int price)
+        public SingleGift(string name, decimal price)
             : base(name, price)
         {
         }
 
-        public override int CalculateTotalPrice()
+        public override decimal CalculateTotalPrice()
         {
-            Console.WriteLine($"{name} with the price {price}");
+            Console.WriteLine($"{Name} with the price {Price}");
 
-            return price;
+            return Price;
         }
     }
 }
-
