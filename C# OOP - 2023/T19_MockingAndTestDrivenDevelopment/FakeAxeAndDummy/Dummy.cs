@@ -1,19 +1,40 @@
 ﻿using System;
+using FakeAxeAndDummy;
 
-public class Dummy
+public class Dummy : ITarget
 {
     private int health;
     private int experience;
 
     public Dummy(int health, int experience)
     {
-        this.health = health;
-        this.experience = experience;
+        this.Health = health;
+        this.Experience = experience;
     }
 
-    public int Health 
+    public int Health
     {
-        get { return this.health; }
+        get => this.health;
+
+        set
+        {
+            health = value;
+        }
+    }
+
+    public int Experience
+    {
+        get => this.experience;
+
+        set
+        {
+            if (this.experience < 0)
+            {
+                throw new ArgumentException("Experience cannot be a negative number");
+            }
+
+            experience = value;
+        }
     }
 
     public void TakeAttack(int attackPoints)
@@ -24,6 +45,11 @@ public class Dummy
         }
 
         this.health -= attackPoints;
+
+        if (this.health < 0)
+        {
+            this.health = 0;
+        }
     }
 
     public int GiveExperience()
@@ -38,6 +64,6 @@ public class Dummy
 
     public bool IsDead()
     {
-        return this.health <= 0;
+        return this.health == 0;
     }
 }

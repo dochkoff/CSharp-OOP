@@ -1,47 +1,62 @@
 ﻿using System;
+using FakeAxeAndDummy;
 using NUnit.Framework;
 
-namespace Skeleton.Tests
+namespace FakeAxeAndDummy.Tests
 {
     [TestFixture]
     public class DummyTests
     {
+        Dummy target;
+
+        [SetUp]
+        public void SetUp()
+        {
+            target = new Dummy(10, 10);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            target = null;
+        }
+
         [Test]
         public void DummnyLosesHealthIfAttacked()
         {
-            Dummy target = new(10, 10);
-
+            int desiredHealthPoints = 5;
             target.TakeAttack(5);
 
-            Assert.That(target.Health, Is.EqualTo(5), "Dummy doesn't lose health if attacked.");
+            Assert.That(target.Health, Is.EqualTo(desiredHealthPoints), "Dummy doesn't lose health if attacked.");
         }
 
         [Test]
         public void DeadDummyThrowsAnExceptionIfAttacked()
         {
-            Dummy target = new(4, 10);
+            target = new Dummy(0, 10);
+            int attackPoints = 5;
 
-            target.TakeAttack(5);
-
-            Assert.Throws<InvalidOperationException>(() => target.TakeAttack(5), "Dead Dummy doesn't throw an exception if attacked.");
+            InvalidOperationException exception =
+                Assert.Throws<InvalidOperationException>(() => target.TakeAttack(attackPoints), "Dead Dummy doesn't throw an exception if attacked.");
+            Assert.That(exception.Message, Is.EqualTo("Dummy is dead."));
         }
 
         [Test]
         public void DeadDummyCanGiveXP()
         {
-            Dummy target = new(0, 10);
+            target = new Dummy(0, 10);
+            int desiredExperience = 10;
+            int givedExperience = target.GiveExperience();
 
-            int exp = target.GiveExperience();
-
-            Assert.That(exp, Is.EqualTo(10), "Dead Dummy can't give XP.");
+            Assert.That(givedExperience, Is.EqualTo(desiredExperience), "Dead Dummy can't give XP.");
         }
 
         [Test]
         public void AliveDummyCantGiveXP()
         {
-            Dummy target = new(10, 10);
-
-            Assert.Throws<InvalidOperationException>(() => target.GiveExperience(), "Alive Dummy can give XP.");
+            InvalidOperationException exception =
+                Assert.Throws<InvalidOperationException>(() => target.GiveExperience(), "Alive Dummy can give XP.");
+            Assert.That(exception.Message, Is.EqualTo("Target is not dead."));
         }
     }
 }

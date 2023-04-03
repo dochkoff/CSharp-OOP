@@ -1,7 +1,7 @@
 ﻿using System;
+using FakeAxeAndDummy;
 
-// Axe durability drop with 5 
-public class Axe
+public class Axe : IWeapon
 {
     private int attackPoints;
     private int durabilityPoints;
@@ -14,15 +14,35 @@ public class Axe
 
     public int AttackPoints
     {
-        get { return this.attackPoints; }
+        get => this.attackPoints;
+
+        set
+        {
+            if (this.attackPoints <= 0)
+            {
+                throw new ArgumentException("Attack points must be a positive number");
+            }
+
+            attackPoints = value;
+        }
     }
 
     public int DurabilityPoints
     {
-        get { return this.durabilityPoints; }
+        get => this.durabilityPoints;
+
+        set
+        {
+            if (this.durabilityPoints <= 0)
+            {
+                throw new ArgumentException("Durability points must be a positive number");
+            }
+
+            attackPoints = value;
+        }
     }
 
-    public void Attack(Dummy target)
+    public void Attack(ITarget target)
     {
         if (this.durabilityPoints <= 0)
         {

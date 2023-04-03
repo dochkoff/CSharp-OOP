@@ -1,31 +1,48 @@
 using System;
-using Newtonsoft.Json.Linq;
+using FakeAxeAndDummy;
+using Moq;
 using NUnit.Framework;
 
-namespace Skeleton.Tests
+namespace FakeAxeAndDummy.Tests
 {
     [TestFixture]
     public class AxeTests
     {
+        Axe weapon;
+        Dummy target;
+
+        [SetUp]
+        public void SetUp()
+        {
+            weapon = new Axe(10, 10);
+            target = new Dummy(10, 10);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            weapon = null;
+            target = null;
+        }
+
         [Test]
         public void AxeLoosesDurabilityAfterAttack()
         {
-            Axe axe = new Axe(10, 10);
-            Dummy target = new(10, 10);
+            int expectedDurability = 9;
 
+            weapon.Attack(target);
 
-            axe.Attack(target);
-
-            Assert.That(axe.DurabilityPoints, Is.EqualTo(9), "Axe Durability doesn't change after attack.");
+            Assert.That(weapon.DurabilityPoints, Is.EqualTo(expectedDurability), "Axe Durability doesn't change after attack.");
         }
 
         [Test]
         public void AttackingWithABrokenWeapon()
         {
-            Axe axe = new Axe(10, 0);
-            Dummy target = new(10, 10);
+            weapon = new Axe(10, 0);
 
-            Assert.Throws<InvalidOperationException>(() => axe.Attack(target));
+            InvalidOperationException exception =
+                Assert.Throws<InvalidOperationException>(() => weapon.Attack(target), "Broken weapon can attack.");
+            Assert.That(exception.Message, Is.EqualTo("Axe is broken."));
         }
     }
 }
