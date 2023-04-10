@@ -10,26 +10,23 @@ namespace RobotService.Models
     {
         private string model;
         private int batteryCapacity;
-        private int batteryLevel;
-        private int conversionCapacityIndex;
         private List<int> interfaceStandards;
 
         public Robot(string model, int batteryCapacity, int conversionCapacityIndex)
         {
-            this.model = model;
-            this.batteryCapacity = batteryCapacity;
-            this.batteryLevel = batteryCapacity;
-            this.conversionCapacityIndex = conversionCapacityIndex;
+            Model = model;
+            BatteryCapacity = batteryCapacity;
+            ConvertionCapacityIndex = conversionCapacityIndex;
             interfaceStandards = new List<int>();
+            BatteryLevel = batteryCapacity;
         }
-
 
         public string Model
         {
-            get { return model; }
+            get => model;
             private set
             {
-                if (string.IsNullOrWhiteSpace(model))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException(ExceptionMessages.ModelNullOrWhitespace);
                 }
@@ -38,73 +35,49 @@ namespace RobotService.Models
             }
         }
 
-
-
         public int BatteryCapacity
         {
-            get { return batteryCapacity; }
+            get => batteryCapacity;
             private set
             {
-                if (batteryCapacity < 0)
+                if (value < 0)
                 {
                     throw new ArgumentException(ExceptionMessages.BatteryCapacityBelowZero);
                 }
+
                 batteryCapacity = value;
             }
         }
 
-        public int BatteryLevel
-        {
-            get { return batteryLevel; }
-            private set
-            {
-                batteryLevel = value;
-            }
-        }
+        public int BatteryLevel { get; private set; }
 
-        public int ConvertionCapacityIndex
-        {
-            get { return conversionCapacityIndex; }
-            private set
-            {
-                conversionCapacityIndex = value;
-            }
-        }
-        //FIXME Private set?
-        public IReadOnlyCollection<int> InterfaceStandards
-        {
-            get { return interfaceStandards.AsReadOnly(); }
-            private set
-            {
-                InterfaceStandards = value;
-            }
-        }
+        public int ConvertionCapacityIndex { get; private set; }
 
+        public IReadOnlyCollection<int> InterfaceStandards => interfaceStandards.AsReadOnly();
 
 
         public void Eating(int minutes)
         {
-            int producedEnergy = minutes * this.conversionCapacityIndex;
-            batteryLevel += producedEnergy;
+            BatteryLevel += minutes * ConvertionCapacityIndex;
 
-            if (batteryLevel > batteryCapacity)
+            if (BatteryLevel > batteryCapacity)
             {
-                batteryLevel = batteryCapacity;
+                BatteryLevel = batteryCapacity;
             }
         }
 
         public void InstallSupplement(ISupplement supplement)
         {
             interfaceStandards.Add(supplement.InterfaceStandard);
-            batteryLevel -= supplement.BatteryUsage;
+            BatteryLevel -= supplement.BatteryUsage;
             batteryCapacity -= supplement.BatteryUsage;
         }
 
         public bool ExecuteService(int consumedEnergy)
         {
-            if (batteryLevel >= consumedEnergy)
+            if (BatteryLevel >= consumedEnergy)
             {
-                batteryLevel -= consumedEnergy;
+                BatteryLevel -= consumedEnergy;
                 return true;
             }
             else
