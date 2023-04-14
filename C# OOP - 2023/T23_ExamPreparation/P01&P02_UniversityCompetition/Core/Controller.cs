@@ -14,12 +14,15 @@ namespace UniversityCompetition.Core
 {
     public class Controller : IController
     {
-        private IRepository<ISubject> subjects = new SubjectRepository();
-        private IRepository<IStudent> students = new StudentRepository();
-        private IRepository<IUniversity> universities = new UniversityRepository();
+        private IRepository<ISubject> subjects;
+        private IRepository<IStudent> students;
+        private IRepository<IUniversity> universities;
 
         public Controller()
         {
+            subjects = new SubjectRepository();
+            students = new StudentRepository();
+            universities = new UniversityRepository();
         }
 
 
@@ -51,7 +54,7 @@ namespace UniversityCompetition.Core
 
             subjects.AddModel(subject);
 
-            return string.Format(OutputMessages.SubjectAddedSuccessfully, subjectType, subjectName, subjects.GetType().Name);
+            return string.Format(OutputMessages.SubjectAddedSuccessfully, subject.GetType().Name, subject.Name, subjects.GetType().Name);
         }
 
 
@@ -108,7 +111,7 @@ namespace UniversityCompetition.Core
                 return OutputMessages.InvalidStudentId;
             }
 
-            if (student == null)
+            if (subject == null)
             {
                 return OutputMessages.InvalidSubjectId;
             }
@@ -133,12 +136,12 @@ namespace UniversityCompetition.Core
 
             if (student == null)
             {
-                return string.Format(OutputMessages.StudentNotRegitered, student.FirstName, student.LastName);
+                return String.Format($"{studentName} is not registered in the application!");
             }
 
             if (university == null)
             {
-                return string.Format(OutputMessages.UniversityNotRegitered, universityName);
+                return String.Format(OutputMessages.UniversityNotRegitered, universityName);
             }
 
             foreach (var requiredExam in university.RequiredSubjects)
@@ -149,14 +152,14 @@ namespace UniversityCompetition.Core
                 }
             }
 
-            if (student.University != null && student.University.Name == universityName)
+            if (student.University != null && student.University.Name == university.Name)
             {
-                return string.Format(OutputMessages.StudentAlreadyJoined, student.FirstName, student.LastName, universityName);
+                return String.Format(OutputMessages.StudentAlreadyJoined, student.FirstName, student.LastName, universityName);
             }
 
             student.JoinUniversity(university);
 
-            return string.Format(OutputMessages.StudentSuccessfullyJoined, student.FirstName, student.LastName, universityName);
+            return String.Format(OutputMessages.StudentSuccessfullyJoined, student.FirstName, student.LastName, universityName);
         }
 
 
