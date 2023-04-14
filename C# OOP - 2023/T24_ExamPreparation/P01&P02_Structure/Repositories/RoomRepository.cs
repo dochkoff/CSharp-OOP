@@ -15,11 +15,11 @@ namespace BookingApp.Repositories
             rooms = new List<IRoom>();
         }
 
-        public void AddNew(IRoom model)
-            => rooms.Add(model);
+        public void AddNew(IRoom room)
+            => rooms.Add(room);
 
-        public IRoom Select(string criteria)
-        => rooms.FirstOrDefault(r => r.GetType().Name == criteria);
+        public IRoom Select(string roomTypeName)
+        => rooms.FirstOrDefault(r => r.GetType().Name == roomTypeName);
 
         public IReadOnlyCollection<IRoom> All()
             => rooms.AsReadOnly();

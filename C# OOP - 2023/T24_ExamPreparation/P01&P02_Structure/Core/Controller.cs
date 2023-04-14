@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using BookingApp.Core.Contracts;
 using BookingApp.Models.Bookings;
 using BookingApp.Models.Bookings.Contracts;
@@ -8,17 +9,18 @@ using BookingApp.Models.Hotels.Contacts;
 using BookingApp.Models.Rooms;
 using BookingApp.Models.Rooms.Contracts;
 using BookingApp.Repositories;
+using BookingApp.Repositories.Contracts;
 using BookingApp.Utilities.Messages;
 
 namespace BookingApp.Core
 {
     public class Controller : IController
     {
-        private HotelRepository hotels;
+        private readonly IRepository<IHotel> hotels;
 
         public Controller()
         {
-            hotels = new();
+            hotels = new HotelRepository();
         }
 
         public string AddHotel(string hotelName, int category)
@@ -50,6 +52,37 @@ namespace BookingApp.Core
                 return OutputMessages.RoomTypeAlreadyCreated;
             }
 
+            if (roomTypeName == "DoubleBed")
+            {
+                room = new DoubleBed();
+            }
+            else if (roomTypeName == "Studio")
+            {
+                room = new Studio();
+            }
+            else if (roomTypeName == "Apartment")
+            {
+                room = new Apartment();
+            }
+            else
+            {
+                throw new ArgumentException(ExceptionMessages.RoomTypeIncorrect);
+            }
+
+            hotel.Rooms.AddNew(room);
+            return String.Format(OutputMessages.RoomTypeAdded, roomTypeName, hotelName);
+
+        }
+
+        public string SetRoomPrices(string hotelName, string roomTypeName, double price)
+        {
+            IHotel hotel = hotels.Select(hotelName);
+
+            if (hotel == null)
+            {
+                return String.Format(OutputMessages.HotelNameInvalid, hotelName);
+            }
+
             if (roomTypeName != "DoubleBed"
                 && roomTypeName != "Studio"
                 && roomTypeName != "Apartment")
@@ -57,25 +90,22 @@ namespace BookingApp.Core
                 throw new ArgumentException(ExceptionMessages.RoomTypeIncorrect);
             }
 
+            IRoom room = hotel.Rooms
+                .All()
+                .FirstOrDefault(r => r.GetType().Name == roomTypeName);
 
-
-            if (roomTypeName == "DoubleBed")
+            if (room == null)
             {
-                DoubleBed doubleBed = new();
-                hotel.Rooms.AddNew(doubleBed);
-            }
-            else if (roomTypeName == "Studio")
-            {
-                Studio studio = new();
-                hotel.Rooms.AddNew(studio);
-            }
-            else if (roomTypeName == "Apartment")
-            {
-                Apartment apartment = new();
-                hotel.Rooms.AddNew(apartment);
+                return OutputMessages.RoomTypeNotCreated;
             }
 
-            return String.Format(OutputMessages.RoomTypeAdded, roomTypeName, hotelName);
+            if (room.PricePerNight > 0)
+            {
+                throw new InvalidOperationException(ExceptionMessages.PriceAlreadySet);
+            }
+
+            room.SetPrice(price);
+            return String.Format(OutputMessages.PriceSetSuccessfully, roomTypeName, hotelName);
 
         }
 
@@ -112,17 +142,42 @@ namespace BookingApp.Core
             }
 
             return OutputMessages.RoomNotAppropriate;
-
         }
 
         public string HotelReport(string hotelName)
         {
-            throw new NotImplementedException();
+            var hotel = hotels
+                .All()
+                .FirstOrDefault(h => h.FullName == hotelName);
+
+            if (hotel == null)
+            {
+                return string.Format(OutputMessages.HotelNameInvalid, hotelName);
+            }
+
+            StringBuilder sb = new();
+
+            sb.AppendLine($"Hotel name: {hotel.FullName}");
+            sb.AppendLine($"--{hotel.Category} star hotel");
+            sb.AppendLine($"--Turnover: {hotel.Turnover:F2} $");
+            sb.AppendLine("--Bookings:");
+            sb.AppendLine();
+
+            if (hotel.Bookings.All().Count == 0)
+            {
+                sb.AppendLine("none");
+            }
+            else
+            {
+                foreach (var booking in hotel.Bookings.All())
+                {
+                    sb.AppendLine(booking.BookingSummary());
+                    sb.AppendLine();
+                }
+            }
+
+            return sb.ToString().Trim();
         }
 
-        public string SetRoomPrices(string hotelName, string roomTypeName, double price)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -18,8 +18,8 @@ namespace BookingApp.Repositories
         public void AddNew(IBooking model)
             => bookings.Add(model);
 
-        public IBooking Select(string criteria)
-            => bookings.FirstOrDefault(b => b.BookingNumber.ToString() == criteria);
+        public IBooking Select(string bookingNumberToString)
+            => bookings.FirstOrDefault(b => b.BookingNumber.ToString() == bookingNumberToString);
 
         public IReadOnlyCollection<IBooking> All()
             => bookings.AsReadOnly();

@@ -30,7 +30,7 @@
         public const string NoRoomsAvailable = "Requested room is not available.";
 
         public const string AmountNegative = "Booking amount cannot be negative!";
-
+        //
         public const string PriceAlreadySet = "Price is already set!";
     }
 }
