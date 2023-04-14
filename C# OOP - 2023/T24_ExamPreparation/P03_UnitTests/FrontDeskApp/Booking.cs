@@ -17,20 +17,20 @@ namespace FrontDeskApp
             ResidenceDuration = residenceDuration;
         }
 
-        public int BookingNumber 
-        { 
-            get => bookingNumber; 
-            private set => bookingNumber = value; 
+        public int BookingNumber
+        {
+            get => bookingNumber;
+            private set => bookingNumber = value;
         }
-        public Room Room 
-        { 
-            get => room; 
-            private set => room = value; 
+        public Room Room
+        {
+            get => room;
+            private set => room = value;
         }
-        public int ResidenceDuration 
-        { 
-            get => residenceDuration; 
-            private set => residenceDuration = value; 
+        public int ResidenceDuration
+        {
+            get => residenceDuration;
+            private set => residenceDuration = value;
         }
     }
 }
