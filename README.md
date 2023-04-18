@@ -18,4 +18,4 @@ The [C# OOP](https://softuni.bg/trainings/3958/csharp-oop-february-2023) course 
 
 ## Course certificate
 
-Loading...
+![C# OOP - February 2023 - Certificate](https://user-images.githubusercontent.com/74410756/232830795-2d45bbf5-621b-4bb5-81c8-4eda654fbc2c.jpeg)
