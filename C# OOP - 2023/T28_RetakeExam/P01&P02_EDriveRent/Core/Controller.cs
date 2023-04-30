@@ -6,21 +6,22 @@ using EDriveRent.Core.Contracts;
 using EDriveRent.Models;
 using EDriveRent.Models.Contracts;
 using EDriveRent.Repositories;
+using EDriveRent.Repositories.Contracts;
 using EDriveRent.Utilities.Messages;
 
 namespace EDriveRent.Core
 {
     public class Controller : IController
     {
-        private UserRepository users;
-        private VehicleRepository vehicles;
-        private RouteRepository routes;
+        private readonly IRepository<IUser> users;
+        private readonly IRepository<IVehicle> vehicles;
+        private readonly IRepository<IRoute> routes;
 
         public Controller()
         {
-            users = new();
-            vehicles = new();
-            routes = new();
+            users = new UserRepository();
+            vehicles = new VehicleRepository();
+            routes = new RouteRepository();
         }
 
         public string RegisterUser(string firstName, string lastName, string drivingLicenseNumber)
@@ -117,9 +118,9 @@ namespace EDriveRent.Core
 
         public string MakeTrip(string drivingLicenseNumber, string licensePlateNumber, string routeId, bool isAccidentHappened)
         {
-            User user = users.FindById(drivingLicenseNumber);
-            Vehicle vehicle = vehicles.FindById(licensePlateNumber);
-            Route route = routes.FindById(routeId);
+            IUser user = users.FindById(drivingLicenseNumber);
+            IVehicle vehicle = vehicles.FindById(licensePlateNumber);
+            IRoute route = routes.FindById(routeId);
 
             if (user.IsBlocked == true)
             {

@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using EDriveRent.Models;
+using EDriveRent.Models.Contracts;
 using EDriveRent.Repositories.Contracts;
 
 namespace EDriveRent.Repositories
 {
-    public class RouteRepository : IRepository<Route>
+    public class RouteRepository : IRepository<IRoute>
     {
-        private List<Route> routes;
+        private List<IRoute> routes;
 
         public RouteRepository()
         {
             routes = new();
         }
 
-        public void AddModel(Route model)
+        public void AddModel(IRoute model)
         {
             routes.Add(model);
         }
 
         public bool RemoveById(string identifier)
         {
-            Route route = routes.FirstOrDefault(u => u.RouteId == int.Parse(identifier));
+            IRoute route = routes.FirstOrDefault(u => u.RouteId == int.Parse(identifier));
 
             if (route == null)
             {
@@ -35,12 +36,12 @@ namespace EDriveRent.Repositories
             }
         }
 
-        public Route FindById(string identifier)
+        public IRoute FindById(string identifier)
         {
             return routes.FirstOrDefault(u => u.RouteId == int.Parse(identifier));
         }
 
-        public IReadOnlyCollection<Route> GetAll()
+        public IReadOnlyCollection<IRoute> GetAll()
         {
             return routes.AsReadOnly();
         }
